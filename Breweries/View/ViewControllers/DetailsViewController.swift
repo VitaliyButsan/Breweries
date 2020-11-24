@@ -88,7 +88,7 @@ class DetailsViewController: UIViewController {
         outputButton.addTarget(self, action: #selector(goToBrewerySite), for: .touchUpInside)
         outputButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
         outputButton.translatesAutoresizingMaskIntoConstraints = false
-        outputButton.setTitle("Visit the site", for: .normal)
+        outputButton.setTitle("Visit the site 🍺", for: .normal)
         outputButton.setTitleColor(.gray, for: .disabled)
         outputButton.layer.cornerRadius = 8
         outputButton.layer.masksToBounds = true
