@@ -16,8 +16,9 @@ class BreweriesViewController: UIViewController {
         tableView.register(BreweryCell.self, forCellReuseIdentifier: BreweryCell.reuseID)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-        tableView.backgroundColor = .secondary
+        tableView.backgroundColor = .beige
         tableView.separatorStyle = .none
+        tableView.delegate = self
         tableView.dataSource = self
         return tableView
     }()
@@ -38,16 +39,16 @@ class BreweriesViewController: UIViewController {
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
     }
     
     private func setupNavigationBar() {
-        navigationItem.title = "Breweries"
-        navigationController?.addCustomBottomLine(color: .secondary, height: 3.0)
+        navigationItem.title = "Breweries 🍺"
+        navigationController?.addCustomBottomLine(color: .beige, height: 3.0)
     }
     
     private func setupObservers() {
@@ -86,6 +87,18 @@ class BreweriesViewController: UIViewController {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+}
+
+// MARK: - table view delegate
+
+extension BreweriesViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let brewery = viewModel.breweries[indexPath.row]
+        let detailsVC = DetailsViewController()
+        detailsVC.brewery = brewery
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
 

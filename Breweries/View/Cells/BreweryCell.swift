@@ -47,7 +47,7 @@ class BreweryCell: UITableViewCell {
     }
     
     private func setup() {
-        contentView.backgroundColor = .secondary
+        contentView.backgroundColor = .beige
         setupLayout()
     }
     
