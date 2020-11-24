@@ -15,6 +15,8 @@
 		58F468B5256D6DCF00017CD5 /* BreweriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468B4256D6DCF00017CD5 /* BreweriesViewController.swift */; };
 		58F468B9256D6ED200017CD5 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468B8256D6ED200017CD5 /* Brewery.swift */; };
 		58F468C1256D744C00017CD5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C0256D744C00017CD5 /* NetworkManager.swift */; };
+		58F468C5256D7B9600017CD5 /* BreweriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C4256D7B9600017CD5 /* BreweriesViewModel.swift */; };
+		58F468C8256D7D2100017CD5 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C7256D7D2100017CD5 /* NotificationName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		58F468B4256D6DCF00017CD5 /* BreweriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesViewController.swift; sourceTree = "<group>"; };
 		58F468B8256D6ED200017CD5 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
 		58F468C0256D744C00017CD5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		58F468C4256D7B9600017CD5 /* BreweriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesViewModel.swift; sourceTree = "<group>"; };
+		58F468C7256D7D2100017CD5 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		58119834256D6BC3004D1E6F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				58F468C4256D7B9600017CD5 /* BreweriesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 		58119837256D6BD4004D1E6F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				58F468C7256D7D2100017CD5 /* NotificationName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,8 +229,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F468C1256D744C00017CD5 /* NetworkManager.swift in Sources */,
+				58F468C8256D7D2100017CD5 /* NotificationName.swift in Sources */,
 				58119823256D6B01004D1E6F /* ViewController.swift in Sources */,
 				5811981F256D6B01004D1E6F /* AppDelegate.swift in Sources */,
+				58F468C5256D7B9600017CD5 /* BreweriesViewModel.swift in Sources */,
 				58119821256D6B01004D1E6F /* SceneDelegate.swift in Sources */,
 				58F468B9256D6ED200017CD5 /* Brewery.swift in Sources */,
 				58F468B5256D6DCF00017CD5 /* BreweriesViewController.swift in Sources */,
