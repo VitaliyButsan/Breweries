@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5811981F256D6B01004D1E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5811981E256D6B01004D1E6F /* AppDelegate.swift */; };
 		58119821256D6B01004D1E6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58119820256D6B01004D1E6F /* SceneDelegate.swift */; };
-		58119823256D6B01004D1E6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58119822256D6B01004D1E6F /* ViewController.swift */; };
 		58119828256D6B04004D1E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58119827256D6B04004D1E6F /* Assets.xcassets */; };
 		5811982B256D6B04004D1E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58119829256D6B04004D1E6F /* LaunchScreen.storyboard */; };
 		58F468B5256D6DCF00017CD5 /* BreweriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468B4256D6DCF00017CD5 /* BreweriesViewController.swift */; };
@@ -17,13 +16,14 @@
 		58F468C1256D744C00017CD5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C0256D744C00017CD5 /* NetworkManager.swift */; };
 		58F468C5256D7B9600017CD5 /* BreweriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C4256D7B9600017CD5 /* BreweriesViewModel.swift */; };
 		58F468C8256D7D2100017CD5 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C7256D7D2100017CD5 /* NotificationName.swift */; };
+		58F468CC256D812A00017CD5 /* BreweryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468CB256D812A00017CD5 /* BreweryCell.swift */; };
+		58F468CF256D819F00017CD5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468CE256D819F00017CD5 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5811981B256D6B01004D1E6F /* Breweries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breweries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5811981E256D6B01004D1E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58119820256D6B01004D1E6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58119822256D6B01004D1E6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58119827256D6B04004D1E6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5811982A256D6B04004D1E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5811982C256D6B04004D1E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +32,8 @@
 		58F468C0256D744C00017CD5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		58F468C4256D7B9600017CD5 /* BreweriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesViewModel.swift; sourceTree = "<group>"; };
 		58F468C7256D7D2100017CD5 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		58F468CB256D812A00017CD5 /* BreweryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryCell.swift; sourceTree = "<group>"; };
+		58F468CE256D819F00017CD5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				58F468C7256D7D2100017CD5 /* NotificationName.swift */,
+				58F468CE256D819F00017CD5 /* Colors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 		5811983A256D6C17004D1E6F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				58F468CB256D812A00017CD5 /* BreweryCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -137,7 +141,6 @@
 		5811983B256D6C1C004D1E6F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				58119822256D6B01004D1E6F /* ViewController.swift */,
 				58F468B4256D6DCF00017CD5 /* BreweriesViewController.swift */,
 			);
 			path = ViewControllers;
@@ -229,10 +232,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F468C1256D744C00017CD5 /* NetworkManager.swift in Sources */,
+				58F468CF256D819F00017CD5 /* Colors.swift in Sources */,
 				58F468C8256D7D2100017CD5 /* NotificationName.swift in Sources */,
-				58119823256D6B01004D1E6F /* ViewController.swift in Sources */,
 				5811981F256D6B01004D1E6F /* AppDelegate.swift in Sources */,
 				58F468C5256D7B9600017CD5 /* BreweriesViewModel.swift in Sources */,
+				58F468CC256D812A00017CD5 /* BreweryCell.swift in Sources */,
 				58119821256D6B01004D1E6F /* SceneDelegate.swift in Sources */,
 				58F468B9256D6ED200017CD5 /* Brewery.swift in Sources */,
 				58F468B5256D6DCF00017CD5 /* BreweriesViewController.swift in Sources */,
