@@ -14,6 +14,7 @@
 		5811982B256D6B04004D1E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58119829256D6B04004D1E6F /* LaunchScreen.storyboard */; };
 		58F468B5256D6DCF00017CD5 /* BreweriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468B4256D6DCF00017CD5 /* BreweriesViewController.swift */; };
 		58F468B9256D6ED200017CD5 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468B8256D6ED200017CD5 /* Brewery.swift */; };
+		58F468C1256D744C00017CD5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C0256D744C00017CD5 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5811982C256D6B04004D1E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58F468B4256D6DCF00017CD5 /* BreweriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesViewController.swift; sourceTree = "<group>"; };
 		58F468B8256D6ED200017CD5 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
+		58F468C0256D744C00017CD5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				58119835256D6BC9004D1E6F /* View */,
 				58119834256D6BC3004D1E6F /* ViewModel */,
 				58119837256D6BD4004D1E6F /* Extensions */,
+				58F468BF256D743500017CD5 /* Managers */,
 				58119839256D6BEA004D1E6F /* Resources */,
 				58119838256D6BDA004D1E6F /* Support files */,
 				5811981E256D6B01004D1E6F /* AppDelegate.swift */,
@@ -142,6 +145,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		58F468BF256D743500017CD5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				58F468C0256D744C00017CD5 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F468C1256D744C00017CD5 /* NetworkManager.swift in Sources */,
 				58119823256D6B01004D1E6F /* ViewController.swift in Sources */,
 				5811981F256D6B01004D1E6F /* AppDelegate.swift in Sources */,
 				58119821256D6B01004D1E6F /* SceneDelegate.swift in Sources */,
