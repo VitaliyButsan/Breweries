@@ -12,6 +12,11 @@ class DetailsViewController: UIViewController {
     
     var brewery: Brewery!
     
+    convenience init(model: Brewery) {
+        self.init(nibName:nil, bundle:nil)
+        self.brewery = model
+    }
+    
     private lazy var containerView: UIView = {
         let outputView = UIView()
         outputView.translatesAutoresizingMaskIntoConstraints = false

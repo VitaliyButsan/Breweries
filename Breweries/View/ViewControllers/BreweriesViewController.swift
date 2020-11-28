@@ -69,9 +69,9 @@ class BreweriesViewController: UIViewController {
     
     private func reloadData() {
         let indexPaths = viewModel.breweries.indices.map { IndexPath(item: $0, section: 0) }
-        DispatchQueue.main.async {
-            self.tableView.insertRows(at: indexPaths, with: .fade)
-        }
+        tableView.beginUpdates()
+        tableView.insertRows(at: indexPaths, with: .fade)
+        tableView.endUpdates()
     }
     
     private func getBreweries() {
@@ -84,10 +84,6 @@ class BreweriesViewController: UIViewController {
         alert.addAction(refresh)
         present(alert, animated: true)
     }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
 }
 
 // MARK: - table view delegate
@@ -96,8 +92,7 @@ extension BreweriesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let brewery = viewModel.breweries[indexPath.row]
-        let detailsVC = DetailsViewController()
-        detailsVC.brewery = brewery
+        let detailsVC = DetailsViewController(model: brewery)
         navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
