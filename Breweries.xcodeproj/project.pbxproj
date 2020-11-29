@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,9 +11,13 @@
 		58119821256D6B01004D1E6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58119820256D6B01004D1E6F /* SceneDelegate.swift */; };
 		58119828256D6B04004D1E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58119827256D6B04004D1E6F /* Assets.xcassets */; };
 		5811982B256D6B04004D1E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58119829256D6B04004D1E6F /* LaunchScreen.storyboard */; };
+		582247182573B4A4005AA073 /* SwinjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582247172573B4A4005AA073 /* SwinjectManager.swift */; };
+		5822471D2573B967005AA073 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 5822471C2573B967005AA073 /* Swinject */; };
+		582247222573BA29005AA073 /* NetworkingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582247212573BA29005AA073 /* NetworkingAssembly.swift */; };
+		582A571F2573C6AB00559B05 /* BreweriesVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582A571E2573C6AB00559B05 /* BreweriesVCAssembly.swift */; };
 		58F468B5256D6DCF00017CD5 /* BreweriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468B4256D6DCF00017CD5 /* BreweriesViewController.swift */; };
 		58F468B9256D6ED200017CD5 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468B8256D6ED200017CD5 /* Brewery.swift */; };
-		58F468C1256D744C00017CD5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C0256D744C00017CD5 /* NetworkManager.swift */; };
+		58F468C1256D744C00017CD5 /* BreweriesNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C0256D744C00017CD5 /* BreweriesNetManager.swift */; };
 		58F468C5256D7B9600017CD5 /* BreweriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C4256D7B9600017CD5 /* BreweriesViewModel.swift */; };
 		58F468C8256D7D2100017CD5 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C7256D7D2100017CD5 /* NotificationName.swift */; };
 		58F468CC256D812A00017CD5 /* BreweryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468CB256D812A00017CD5 /* BreweryCell.swift */; };
@@ -28,9 +32,12 @@
 		58119827256D6B04004D1E6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5811982A256D6B04004D1E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5811982C256D6B04004D1E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		582247172573B4A4005AA073 /* SwinjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectManager.swift; sourceTree = "<group>"; };
+		582247212573BA29005AA073 /* NetworkingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAssembly.swift; sourceTree = "<group>"; };
+		582A571E2573C6AB00559B05 /* BreweriesVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesVCAssembly.swift; sourceTree = "<group>"; };
 		58F468B4256D6DCF00017CD5 /* BreweriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesViewController.swift; sourceTree = "<group>"; };
 		58F468B8256D6ED200017CD5 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
-		58F468C0256D744C00017CD5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		58F468C0256D744C00017CD5 /* BreweriesNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesNetManager.swift; sourceTree = "<group>"; };
 		58F468C4256D7B9600017CD5 /* BreweriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesViewModel.swift; sourceTree = "<group>"; };
 		58F468C7256D7D2100017CD5 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		58F468CB256D812A00017CD5 /* BreweryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryCell.swift; sourceTree = "<group>"; };
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5822471D2573B967005AA073 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +168,10 @@
 		58F468BF256D743500017CD5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				58F468C0256D744C00017CD5 /* NetworkManager.swift */,
+				582247172573B4A4005AA073 /* SwinjectManager.swift */,
+				58F468C0256D744C00017CD5 /* BreweriesNetManager.swift */,
+				582247212573BA29005AA073 /* NetworkingAssembly.swift */,
+				582A571E2573C6AB00559B05 /* BreweriesVCAssembly.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -181,6 +192,9 @@
 			dependencies = (
 			);
 			name = Breweries;
+			packageProductDependencies = (
+				5822471C2573B967005AA073 /* Swinject */,
+			);
 			productName = Breweries;
 			productReference = 5811981B256D6B01004D1E6F /* Breweries.app */;
 			productType = "com.apple.product-type.application";
@@ -208,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 58119812256D6B00004D1E6F;
+			packageReferences = (
+				5822471B2573B967005AA073 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 5811981C256D6B01004D1E6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,13 +251,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58F468C1256D744C00017CD5 /* NetworkManager.swift in Sources */,
+				58F468C1256D744C00017CD5 /* BreweriesNetManager.swift in Sources */,
 				58F468CF256D819F00017CD5 /* Colors.swift in Sources */,
+				582247182573B4A4005AA073 /* SwinjectManager.swift in Sources */,
+				582A571F2573C6AB00559B05 /* BreweriesVCAssembly.swift in Sources */,
 				58F468C8256D7D2100017CD5 /* NotificationName.swift in Sources */,
 				5811981F256D6B01004D1E6F /* AppDelegate.swift in Sources */,
 				58F468C5256D7B9600017CD5 /* BreweriesViewModel.swift in Sources */,
 				58F468CC256D812A00017CD5 /* BreweryCell.swift in Sources */,
 				58119821256D6B01004D1E6F /* SceneDelegate.swift in Sources */,
+				582247222573BA29005AA073 /* NetworkingAssembly.swift in Sources */,
 				58F468B9256D6ED200017CD5 /* Brewery.swift in Sources */,
 				58F468B5256D6DCF00017CD5 /* BreweriesViewController.swift in Sources */,
 				58F468D2256D90A500017CD5 /* DetailsViewController.swift in Sources */,
@@ -437,6 +457,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5822471B2573B967005AA073 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5822471C2573B967005AA073 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5822471B2573B967005AA073 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58119813256D6B01004D1E6F /* Project object */;
 }

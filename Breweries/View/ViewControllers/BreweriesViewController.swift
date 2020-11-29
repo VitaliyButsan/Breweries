@@ -9,7 +9,12 @@ import UIKit
 
 class BreweriesViewController: UIViewController {
     
-    private let viewModel = BreweriesViewModel()
+    private var viewModel: BreweriesViewModel!
+    
+    convenience init(viewModel: BreweriesViewModel) {
+        self.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()

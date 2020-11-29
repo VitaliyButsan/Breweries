@@ -18,8 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         window.windowScene = windowScene
 
-        let viewController = BreweriesViewController()
-        let navViewController = UINavigationController(rootViewController: viewController)
+        guard let initialViewController = SwinjectManager().mainVC else { fatalError() }
+        let navViewController = UINavigationController(rootViewController: initialViewController)
         window.rootViewController = navViewController
         
         self.window = window

@@ -15,9 +15,14 @@ enum NetError: Error {
 class BreweriesViewModel {
     
     var breweries: [Brewery] = []
+    private let networkManager: Networking
+    
+    init(networkManager: Networking) {
+        self.networkManager = networkManager
+    }
     
     func getBreweries() {
-        NetworkManager.shared.request { [weak self] data, response, _ in
+        networkManager.request { [weak self] data, response, _ in
             guard let self = self else { return }
             
             if let response = (response as? HTTPURLResponse), (200...299).contains(response.statusCode) {

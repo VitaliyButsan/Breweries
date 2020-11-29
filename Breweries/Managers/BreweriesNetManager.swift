@@ -7,9 +7,13 @@
 
 import Foundation
 
-class NetworkManager {
+protocol Networking: class {
+    func request(callBack: @escaping(Data?, URLResponse?, Error?) -> Void)
+}
+
+class BreweriesNetManager: Networking {
     
-    public static let shared = NetworkManager()
+    public static let shared = BreweriesNetManager()
     
     private init() { }
     
