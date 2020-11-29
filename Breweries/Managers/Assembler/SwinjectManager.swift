@@ -11,8 +11,9 @@ import Swinject
 final class SwinjectManager {
     
     private let assembler = Assembler([
-        NetworkingAssembly(),
-        BreweriesVCAssembly(),
+        BreweriesViewControllerAssembly(),
+        BreweriesViewModelAssembly(),
+        BreweriesNetManagerAssembly(),
     ])
     
     var mainVC: UIViewController? {

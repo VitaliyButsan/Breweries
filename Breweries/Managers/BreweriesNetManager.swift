@@ -13,10 +13,6 @@ protocol Networking: class {
 
 class BreweriesNetManager: Networking {
     
-    public static let shared = BreweriesNetManager()
-    
-    private init() { }
-    
     func request(callBack: @escaping(Data?, URLResponse?, Error?) -> Void) {
         let parameters = prepareParameters()
         let URL = url(params: parameters)

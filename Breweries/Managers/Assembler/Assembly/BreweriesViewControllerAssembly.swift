@@ -7,7 +7,7 @@
 
 import Swinject
 
-final class BreweriesVCAssembly: Assembly {
+final class BreweriesViewControllerAssembly: Assembly {
     
     func assemble(container: Container) {
         container.register(BreweriesViewController.self) { resolver in

@@ -17,7 +17,8 @@ class BreweriesViewModel {
     var breweries: [Brewery] = []
     private let networkManager: Networking
     
-    init(networkManager: Networking) {
+    init(networkManager: Networking?) {
+        guard let networkManager = networkManager else { fatalError("BreweriesViewModel init") }
         self.networkManager = networkManager
     }
     

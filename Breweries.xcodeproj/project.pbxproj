@@ -13,8 +13,9 @@
 		5811982B256D6B04004D1E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58119829256D6B04004D1E6F /* LaunchScreen.storyboard */; };
 		582247182573B4A4005AA073 /* SwinjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582247172573B4A4005AA073 /* SwinjectManager.swift */; };
 		5822471D2573B967005AA073 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 5822471C2573B967005AA073 /* Swinject */; };
-		582247222573BA29005AA073 /* NetworkingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582247212573BA29005AA073 /* NetworkingAssembly.swift */; };
-		582A571F2573C6AB00559B05 /* BreweriesVCAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582A571E2573C6AB00559B05 /* BreweriesVCAssembly.swift */; };
+		582247222573BA29005AA073 /* BreweriesViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582247212573BA29005AA073 /* BreweriesViewModelAssembly.swift */; };
+		582A571F2573C6AB00559B05 /* BreweriesViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582A571E2573C6AB00559B05 /* BreweriesViewControllerAssembly.swift */; };
+		5891295D2573EDBF00AC6D69 /* BreweriesNetManagerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891295C2573EDBF00AC6D69 /* BreweriesNetManagerAssembly.swift */; };
 		58F468B5256D6DCF00017CD5 /* BreweriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468B4256D6DCF00017CD5 /* BreweriesViewController.swift */; };
 		58F468B9256D6ED200017CD5 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468B8256D6ED200017CD5 /* Brewery.swift */; };
 		58F468C1256D744C00017CD5 /* BreweriesNetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F468C0256D744C00017CD5 /* BreweriesNetManager.swift */; };
@@ -33,8 +34,9 @@
 		5811982A256D6B04004D1E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5811982C256D6B04004D1E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		582247172573B4A4005AA073 /* SwinjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectManager.swift; sourceTree = "<group>"; };
-		582247212573BA29005AA073 /* NetworkingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingAssembly.swift; sourceTree = "<group>"; };
-		582A571E2573C6AB00559B05 /* BreweriesVCAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesVCAssembly.swift; sourceTree = "<group>"; };
+		582247212573BA29005AA073 /* BreweriesViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesViewModelAssembly.swift; sourceTree = "<group>"; };
+		582A571E2573C6AB00559B05 /* BreweriesViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesViewControllerAssembly.swift; sourceTree = "<group>"; };
+		5891295C2573EDBF00AC6D69 /* BreweriesNetManagerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesNetManagerAssembly.swift; sourceTree = "<group>"; };
 		58F468B4256D6DCF00017CD5 /* BreweriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesViewController.swift; sourceTree = "<group>"; };
 		58F468B8256D6ED200017CD5 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
 		58F468C0256D744C00017CD5 /* BreweriesNetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesNetManager.swift; sourceTree = "<group>"; };
@@ -165,13 +167,30 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		589129632573F44200AC6D69 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				589129642573F44E00AC6D69 /* Assembly */,
+				582247172573B4A4005AA073 /* SwinjectManager.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		589129642573F44E00AC6D69 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				582247212573BA29005AA073 /* BreweriesViewModelAssembly.swift */,
+				582A571E2573C6AB00559B05 /* BreweriesViewControllerAssembly.swift */,
+				5891295C2573EDBF00AC6D69 /* BreweriesNetManagerAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		58F468BF256D743500017CD5 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				582247172573B4A4005AA073 /* SwinjectManager.swift */,
+				589129632573F44200AC6D69 /* Assembler */,
 				58F468C0256D744C00017CD5 /* BreweriesNetManager.swift */,
-				582247212573BA29005AA073 /* NetworkingAssembly.swift */,
-				582A571E2573C6AB00559B05 /* BreweriesVCAssembly.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -254,13 +273,14 @@
 				58F468C1256D744C00017CD5 /* BreweriesNetManager.swift in Sources */,
 				58F468CF256D819F00017CD5 /* Colors.swift in Sources */,
 				582247182573B4A4005AA073 /* SwinjectManager.swift in Sources */,
-				582A571F2573C6AB00559B05 /* BreweriesVCAssembly.swift in Sources */,
+				582A571F2573C6AB00559B05 /* BreweriesViewControllerAssembly.swift in Sources */,
+				5891295D2573EDBF00AC6D69 /* BreweriesNetManagerAssembly.swift in Sources */,
 				58F468C8256D7D2100017CD5 /* NotificationName.swift in Sources */,
 				5811981F256D6B01004D1E6F /* AppDelegate.swift in Sources */,
 				58F468C5256D7B9600017CD5 /* BreweriesViewModel.swift in Sources */,
 				58F468CC256D812A00017CD5 /* BreweryCell.swift in Sources */,
 				58119821256D6B01004D1E6F /* SceneDelegate.swift in Sources */,
-				582247222573BA29005AA073 /* NetworkingAssembly.swift in Sources */,
+				582247222573BA29005AA073 /* BreweriesViewModelAssembly.swift in Sources */,
 				58F468B9256D6ED200017CD5 /* Brewery.swift in Sources */,
 				58F468B5256D6DCF00017CD5 /* BreweriesViewController.swift in Sources */,
 				58F468D2256D90A500017CD5 /* DetailsViewController.swift in Sources */,
