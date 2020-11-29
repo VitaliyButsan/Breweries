@@ -27,11 +27,13 @@ class BreweriesViewModel {
                 print(NetError.responseError)
                 return
             }
+            
             guard let data = data else { return }
-            guard let results: [Brewery] = self.parse(data: data) else {
+            guard let results: [Brewery] = self.decode(data: data) else {
                 print(NetError.parseError)
                 return
             }
+            
             self.breweries = results
             self.sendNotification(name: .complete)
         }
@@ -41,7 +43,7 @@ class BreweriesViewModel {
         NotificationCenter.default.post(name: name, object: self)
     }
     
-    private func parse<T: Decodable>(data: Data) -> [T]? {
+    private func decode<T: Decodable>(data: Data) -> [T]? {
         do {
             return try JSONDecoder().decode([T].self, from: data)
         } catch {

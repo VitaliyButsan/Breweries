@@ -10,10 +10,10 @@ import SafariServices
 
 class DetailsViewController: UIViewController {
     
-    var brewery: Brewery!
+    private var brewery: Brewery!
     
     convenience init(model: Brewery) {
-        self.init(nibName:nil, bundle:nil)
+        self.init(nibName: nil, bundle: nil)
         self.brewery = model
     }
     
@@ -128,6 +128,7 @@ class DetailsViewController: UIViewController {
         streetLabel].forEach { infoVStack.addArrangedSubview($0) }
         
         NSLayoutConstraint.activate([
+            
             containerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),

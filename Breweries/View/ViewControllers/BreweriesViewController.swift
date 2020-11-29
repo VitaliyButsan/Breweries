@@ -68,10 +68,10 @@ class BreweriesViewController: UIViewController {
     }
     
     private func reloadData() {
-        let indexPaths = viewModel.breweries.indices.map { IndexPath(item: $0, section: 0) }
-        tableView.beginUpdates()
-        tableView.insertRows(at: indexPaths, with: .fade)
-        tableView.endUpdates()
+        let indexPaths = viewModel.breweries.indices.map { IndexPath(row: $0, section: 0) }
+        tableView.performBatchUpdates {
+            tableView.insertRows(at: indexPaths, with: .fade)
+        }
     }
     
     private func getBreweries() {
@@ -80,7 +80,7 @@ class BreweriesViewController: UIViewController {
     
     private func alertHandler(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let refresh = UIAlertAction(title: "Refresh", style: .default, handler: { _ in self.getBreweries() })
+        let refresh = UIAlertAction(title: "Refresh", style: .default) { _ in self.getBreweries() }
         alert.addAction(refresh)
         present(alert, animated: true)
     }
